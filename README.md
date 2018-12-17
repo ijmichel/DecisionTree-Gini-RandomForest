@@ -14,5 +14,20 @@ This will output the confusion matrix.   To get accuracy from that run with a pi
 
 python DecisionTree.py ~/data/balance.scale.train ~/data/balance.scale.train | python accuracy.py 
 
-To change the number of trees and F value for Random Forest alter this section of code:
+To change the number of trees and F value for Random Forest alter this section of code below.  The first value is
+the F value, the second is the # of trees:
+
+```
+def getRunParameters (trainPath):  
+  if "nursery" in trainPath:   
+    return 7,25        
+  elif "synthetic.social" in trainPath:    
+    return 8,20    
+  elif "led" in trainPath
+    return 7,20     
+  elif "balance.scale" in trainPath:
+    return 1,93        
+```
+
+Or you can use this code to do it automatically to run tests:
 
