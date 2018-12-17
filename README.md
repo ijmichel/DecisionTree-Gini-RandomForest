@@ -31,3 +31,8 @@ def getRunParameters (trainPath):
 
 Or you can use this code to do it automatically to run tests:
 
+RandomForestIterate.py
+
+python RandomForestIterate.py ~/nursery.train ~/nursery.test 1 10 1 70
+
+The above executes the code to build a tree on nursery,train and test with nursery.test, with 1 to 10 F values and 1 to 80 trees
