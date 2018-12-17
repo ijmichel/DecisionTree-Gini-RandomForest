@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo Normal Balance - Test
+python DecisionTree.py ~/balance.scale.train ~/balance.scale.test | python accuracy.py
+echo Random Balance - Test
+python RandomForest.py ~/balance.scale.train ~/balance.scale.test | python accuracy.py
+
+echo Normal Balance - Train
+python DecisionTree.py ~/balance.scale.train ~/balance.scale.train | python accuracy.py
+echo Random Balance - Train
+python RandomForest.py ~/balance.scale.train ~/balance.scale.train | python accuracy.py
+
+echo Normal Led - Test
+python DecisionTree.py ~/led.train ~/led.test | python accuracy.py
+echo Random Led - Test
+python RandomForest.py ~/led.train ~/led.test | python accuracy.py
+
+echo Normal Led - Train
+python DecisionTree.py ~/led.train ~/led.train | python accuracy.py
+echo Random Led - Train
+python RandomForest.py ~/led.train ~/led.train | python accuracy.py
+
+echo Normal Nursery - Test
+python DecisionTree.py ~/nursery.train ~/nursery.test | python accuracy.py
+echo Random Nursery - Test
+python RandomForest.py ~/nursery.train ~/nursery.test | python accuracy.py
+
+echo Normal Nursery - Train
+python DecisionTree.py ~/nursery.train ~/nursery.train | python accuracy.py
+echo Random Nursery - Train
+python RandomForest.py ~/nursery.train ~/nursery.train | python accuracy.py
+
+echo Normal Synthetic Social - Test
+python DecisionTree.py ~/synthetic.social.train ~/synthetic.social.test | python accuracy.py
+echo Random Synthetic Social - Test
+python RandomForest.py ~/synthetic.social.train ~/synthetic.social.test | python accuracy.py
+
+echo Normal Synthetic Social - Train
+python DecisionTree.py ~/synthetic.social.train ~/synthetic.social.train | python accuracy.py
+echo Random Synthetic Social - Train
+python RandomForest.py ~/synthetic.social.train ~/synthetic.social.train | python accuracy.py
